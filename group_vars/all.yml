@@ -10,15 +10,15 @@ mm_tag: latest
 # use the appropriate config templete
 # set it to multiparty-meeting version
 # or dev for develop
-config_template_version: 3.2.1
+config_template_version: 3.3.0
 
-fqdn_host: meet
-fqdn_domain: example.com
+fqdn_host: node
+fqdn_domain: cm.cybergate.lk
 
 # let's encrypt
 cert_domains:
   - "{{ fqdn_host }}.{{ fqdn_domain }}"
-cert_email: "user@example.com"
+cert_email: "cgadmin@cybergate.lk"
 
 # TURN
 turn_uri: "turn:turnserver.example.com:443?transport=tcp"
