@@ -1,9 +1,8 @@
 
-# Ansible for multipartymeeting/mm install
+# Ansible Palybook for CyberMeet install
 
-Basic ansible script to instal Multiparty-Meeting in docker based on an openstack base debian image.
+Basic ansible script to instal CyberTeach in docker based on an openstack base debian image.
 
-[![asciicast](https://asciinema.org/a/311365.svg)](https://asciinema.org/a/311365)
 
 ### Requirments
 You need to have:
@@ -21,13 +20,10 @@ Rename according your hosts, and Edit host_vars/meet.yml
 
 ##### TURN
 
-If you are working for the Education or Research community, 
-then please visit to https://turn.geant.org
- to get a turn password credential,
- and edit file group_vars/mm.yml accordingly.
-Otherwise install and configure a turn server (e.g. https://coturn.net)
+Deploy a TURN Server Befor you proceed with Ansible Playbook
 
 #### Advanced options
+
 For more advanced options see group_vars/all.yml
 
 ## Install
