@@ -1,5 +1,5 @@
 ---
-fqdn_host: meet
+fqdn_host: mgr
 
 # by default we use letsencrypt and so local_cert is flase
 # set it true to enable local cert usage
