@@ -7,28 +7,27 @@ mm_tag: latest
 # use the appropriate config templete
 # set it to multiparty-meeting version
 # or dev for develop
-config_template_version: 3.2.1
+config_template_version: 3.3.0
 
-fqdn_domain: example.com
+fqdn_domain: cm.cybergate.lk
 
 # let's encrypt
 cert_domains:
   - "{{ fqdn_host }}.{{ fqdn_domain }}"
-cert_email: user@example.com
-
+cert_email: cgadmin@cybergate.lk
 # TURN
-turn_uri: turn:ltc.turn.geant.org:443?transport=tcp
-turn_user: user
-turn_password: password
+turn_uri: turn:turn.cm.cybergate.lk:443?transport=tcp
+turn_user: cybermeet
+turn_password: ba53fd6ac1
 
 # Introduced in version: 3.3.0
 # If you part of the NREN community then
 # goto https://turn.geant.org to get your api key.
-turn_api_uri: "https://api.turn.geant.org/turn"
-turn_api_key: ""
+turn_api_uri: "https://turn.cm.cybergate.lk"
+turn_api_key: "ba53fd6ac160c3f3312209e9bdf1814f246ecf8d2ec9f3406004e55a32a87bcc"
 
 # session cookie secret
-cookie_secret: secret-cookie
+cookie_secret: ba53fd6ac1
 
 
 # See for more options and defaults in all.yml
