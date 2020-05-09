@@ -136,11 +136,11 @@
       dst: "{{ deployment_directory }}/configs/server/config.js"
     }
 
-# pull lastest image
+# pull lastest imaget
 - name: "pull docker image mm:{{mm_tag}}"
   become: true
   docker_image:
-    name: misi/mm
+    name: cyber/cm
     tag: "{{mm_tag}}"
     source: pull
     force_source: true
