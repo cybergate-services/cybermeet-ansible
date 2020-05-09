@@ -52,13 +52,13 @@
 
 - name: check if an old deployment directory exists
   stat:
-    path: "{{ deployment_directory}}"
+    path: "{{ deployment_directory }}"
   register: oldmm_dir
 
 - name: tear down existing services
   become: true
   docker_compose:
-    project_src: "{{ deployment_directory}}"
+    project_src: "{{ deployment_directory }}"
     state: absent
   when: oldmm_dir.stat.exists and oldmm_dir.stat.isdir
   ignore_errors: true
@@ -115,7 +115,7 @@
 - name: copy logo
   copy:
     src: logo.svg
-    dest: "{{ deployment_directory}}/images/logo.svg"
+    dest: "{{ deployment_directory }}/images/logo.svg"
 
 - name: App Config
   become: true
@@ -137,11 +137,11 @@
     }
 
 # pull lastest imaget
-- name: "pull docker image mm:{{mm_tag}}"
+- name: "pull docker image cm:{{ mm_tag }}"
   become: true
   docker_image:
     name: cyber/cm
-    tag: "{{mm_tag}}"
+    tag: "{{ mm_tag }}"
     source: pull
     force_source: true
 
@@ -149,7 +149,7 @@
 - name: Create and start services
   become: true
   docker_compose:
-    project_src: "{{ deployment_directory}}"
+    project_src: "{{ deployment_directory }}"
   register: output
 
 # - debug:
